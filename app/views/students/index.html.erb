@@ -1,0 +1,17 @@
+<%= render "shared/navbar" %>
+<h1 class= "justify-content" style=" text-align:center; margin-top: 40PX;">WellCome to the Website</h1>
+<h1><%- puts "Wakeel Mustfa is here"-%></h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+       <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+<%= render partial: "shared/display", collection: @students , :as => :student %>
+<%=button_to 'Add Student','students/new', method: 'get' ,class: "btn btn-success"%>
+  </tbody>
+</table>
